@@ -240,7 +240,12 @@ if df_long_term is not None and df_hourly is not None:
         "Rafales Max (km/h)": "mean",
         "Indice UV Max": "mean"
     }).reset_index()
-    
+
+    # Conversion en numérique (sécurité)
+    for col in departement_forecast.columns:
+        if col != "Date":
+            departement_forecast[col] = pd.to_numeric(departement_forecast[col], errors='coerce')
+        
     # Arrondir les valeurs
     for col in departement_forecast.columns:
         if col != "Date":
@@ -786,4 +791,5 @@ if df_long_term is not None and df_hourly is not None:
         st.plotly_chart(fig_forecast_wind, use_container_width=True)
             
 else:
+
     st.error("Impossible de charger les données depuis l'API Open-Meteo.")
