@@ -82,7 +82,6 @@ Ensuite, ouvre ton navigateur à l’adresse :
 ### 📂 Structure du projet
 
 meteo/
-│
 ├── meteo.py # Script principal Streamlit 
 ├── requirements.txt # Liste des dépendances 
 └── README.md # Ce fichier
