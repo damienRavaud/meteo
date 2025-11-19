@@ -98,7 +98,7 @@ def load_data_from_api(model_name="AROME"):
             all_hourly_data.append(df_hourly)
             
             # pause pour ne pas surcharger l'API
-            time.sleep(0.2)
+            time.sleep(0.01)
             
         except Exception as e:
             st.warning(f"Erreur pour {ville['nom']}: {e}")
@@ -793,3 +793,4 @@ if df_long_term is not None and df_hourly is not None:
 else:
 
     st.error("Impossible de charger les données depuis l'API Open-Meteo.")
+
