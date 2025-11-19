@@ -88,19 +88,6 @@ meteo/
 
 ----------
 
-### 🌍 Déploiement sur Streamlit Cloud
-
-1.  Pousse ton dépôt sur GitHub.
-    
-2.  Va sur streamlit.io/cloud.
-    
-3.  Clique sur **“New app”** et sélectionne ton dépôt.
-    
-4.  Indique le chemin vers `meteo.py` et c’est tout ! 🎉
-    
-
-----------
-
 ### Auteur
 
 👤 **Damien Ravaud**  
